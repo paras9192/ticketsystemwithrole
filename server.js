@@ -19,6 +19,10 @@ app.use(bodyParser.json())
 var indexRouter = require('./src/services/user/routes/index.js');
 var ticketRouter = require('./src/services/tickets/routes/index.js');
 
+app.get('/', (req,res)=> {
+    res.send('welcome to the ticket system');
+});
+
 app.use('/user', indexRouter);
 app.use('/tickets', ticketRouter);
 
